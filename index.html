@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Pakistan - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+<style> .site-footer a:hover {
+  color: #ffdd00;
+  text-decoration:underline;
+}
+ /* Map container */
+       .pakistan-map {
+    position: relative;
+    width: 800px;  /* fixed width */
+    height: auto;  /* maintain aspect ratio */
+    margin: 20px auto;
+}
+
+.pakistan-map img {
+    width: 100%;
+    display: block;
+}
+
+
+        .city-circle {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: red;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: transform 0.2s;
+        }
+        .city-circle:hover {
+            transform: scale(1.5);
+            background: darkred;
+        }
+
+         .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  @media (max-width:768px) {
+    .review-card {
+      flex:1 1 90% !important;
+    }
+  }
+  #reviews {
+  background-color: #f5f5f5; /* light gray background */
+  padding: 60px 0;
+}
+
+/* Stats Counter Section */
+.stats-section {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  margin-top: 50px;
+}
+
+.stats-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 30px;
+}
+
+.stat-box {
+  width: 200px;
+}
+
+.stat-number {
+  font-size: 45px;
+  font-weight: 700;
+  color: #2d89ef; /* blue highlight */
+}
+
+.stat-label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+
+</style>
+</head>
+<body class="home">
+
+<!-- ===== Top Header Section ===== -->
+
+<div class="site-topbar">
+  <div class="site-topbar__left">
+    <span>Enjoy your <strong>FREEDOM</strong> with the <strong>BEST tour company</strong> in Abbottabad, Pakistan</span>
+  </div>
+
+  <div class="site-topbar__center">
+    <i class="fa fa-envelope"></i>
+    <a href="mailto:travelpakistan66@gmail.com">travelpakistan66@gmail.com</a>
+  </div>
+
+  <div class="site-topbar__phone">
+    <i class="fa fa-phone"></i>
+    <a href="tel:+923135743761">+92 313 5743761</a>
+  </div>
+
+  
+</div>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="logo">
+    <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?w=2000" alt="Explore Pakistan">
+    <span>Explore Pakistan</span>
+  </div>
+  <div class="links">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+
+<!-- ===== Hero Section ===== -->
+ <section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to Explore Pakistan</h1>
+    <p>Discover breathtaking landscapes, rich culture, and unforgettable adventures!</p>
+  </div>
+</section>
+<!-- ============================= -->
+<!-- Customer Reviews Section -->
+<!-- ============================= -->
+<section id="reviews" style="background:#f5f5f5; padding:60px 0;">
+  <div class="container" style="width:90%; max-width:1200px; margin:0 auto;">
+    <h2 style="text-align:center; margin-bottom:40px;">What Our Customers Say</h2>
+    
+    <div class="reviews" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+      
+      <!-- Review Card 1 -->
+      <div class="review-card" style="background:#f3e4e4; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.1); padding:20px; flex:1 1 300px; max-width:350px; text-align:center; transition: transform 0.3s;">
+       <div style="width:80px; height:80px; border-radius:50%; background:#ddd; display:flex; align-items:center; justify-content:center; margin:0 auto 15px auto;">
+  <svg width="32" height="32" fill="#555" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s1-1 6-1 6 1 6 1-1-4-6-4-6 4-6 4z"/>
+  </svg>
+</div>
+
+        <div class="review-name" style="font-weight:bold; margin-bottom:10px;">Ali Khan</div>
+        <div class="stars" style="color:#f5b50a; margin-bottom:15px; font-size:18px;">★★★★★</div>
+        <div class="review-text" style="font-size:14px; color:#555;">Amazing service! The trip was smooth and memorable. Highly recommended!</div>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="review-card" style="background:#f3e4e4; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.1); padding:20px; flex:1 1 300px; max-width:350px; text-align:center; transition: transform 0.3s;">
+       <div style="width:80px; height:80px; border-radius:50%; background:#ddd; display:flex; align-items:center; justify-content:center; margin:0 auto 15px auto;">
+ 
+        <svg width="32" height="32" fill="#555" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s1-1 6-1 6 1 6 1-1-4-6-4-6 4-6 4z"/>
+  </svg>
+</div>
+
+        <div class="review-name" style="font-weight:bold; margin-bottom:10px;">Sara Ahmed</div>
+        <div class="stars" style="color:#f5b50a; margin-bottom:15px; font-size:18px;">★★★★☆</div>
+        <div class="review-text" style="font-size:14px; color:#555;">Good experience, though the pickup was slightly late. Otherwise perfect!</div>
+      </div>
+
+      <!-- Review Card 3 -->
+      <div class="review-card" style="background:#f3e4e4; border-radius:10px; box-shadow:0 3px 6px rgba(0,0,0,0.1); padding:20px; flex:1 1 300px; max-width:350px; text-align:center; transition: transform 0.3s;">
+        <div style="width:80px; height:80px; border-radius:50%; background:#ddd; display:flex; align-items:center; justify-content:center; margin:0 auto 15px auto;">
+  <svg width="32" height="32" fill="#555" viewBox="0 0 16 16">
+    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 14s1-1 6-1 6 1 6 1-1-4-6-4-6 4-6 4z"/>
+  </svg>
+</div>
+
+        <div class="review-name" style="font-weight:bold; margin-bottom:10px;">Hamza Ali</div>
+        <div class="stars" style="color:#f5b50a; margin-bottom:15px; font-size:18px;">★★★★★</div>
+        <div class="review-text" style="font-size:14px; color:#555;">Excellent! Everything was organized and hassle-free. Loved it!</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+   <h2 style="text-align:center;">Explore Pakistan</h2>
+
+<div class="pakistan-map">
+    <img src="https://images.mapsofworld.com/pakistan/large-pakistan-map.jpg" alt="Pakistan Map">
+
+    <!-- Clickable Cities -->
+    <a href="islamabad.html" class="city-circle" style="top:21%; left:70%;" title="Islamabad"></a>
+    <a href="abbottabad.html" class="city-circle" style="top:29%; left:55%;" title="Abbottabad"></a>
+    <a href="karachi.html" class="city-circle" style="top:83%; left:40%;" title="Karachi"></a>
+    <a href="lahore.html" class="city-circle" style="top:35%; left:68%;" title="Lahore"></a>
+</div>
+
+</body>
+</html>
+
+  <!-- ===== About Section ===== -->
+  <section class="main-content">
+    <h2>About Pakistan</h2>
+    <p>
+      Pakistan is a land of wonders — from the world’s highest mountains like <strong>K2</strong> and <strong>Nanga Parbat</strong> 
+      to peaceful valleys like <strong>Hunza</strong>, <strong>Swat</strong>, and <strong>Skardu</strong>.
+      Its culture reflects thousands of years of heritage, traditions, and hospitality.
+    </p>
+    <p>
+      Experience colorful festivals, melodious folk music, and delicious cuisine including <em>Biryani</em>, 
+      <em>Chapli Kabab</em>, and <em>Halwa Puri</em>. Each city tells a story — from Lahore’s Mughal architecture 
+      to Karachi’s vibrant seaport.
+    </p>
+  </section>
+
+  <!-- ===== YouTube Video Section ===== -->
+  <section class="video-section">
+    <h2>Explore the Beauty of Pakistan</h2>
+    <div class="video-box">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/DHnHpHkwqs4"
+        title="Explore Pakistan Video" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+   <!-- Achievements / Stats Counter Section -->
+<section class="stats-section">
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <div class="stat-number" data-target="1200">0</div>
+      <p class="stat-label">Happy Travellers</p>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-number" data-target="350">0</div>
+      <p class="stat-label">Tours Completed</p>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-number" data-target="18">0</div>
+      <p class="stat-label">Cities Covered</p>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-number" data-target="3">0</div>
+      <p class="stat-label">Years of Service</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+ 
+ <!-- Footer -->
+<footer class="site-footer" style="background:#003566; color:#fff; padding:40px 20px; font-family:Poppins, sans-serif;">
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:20px;">
+
+    <!-- Left Column: Famous Places -->
+    <div class="footer-section" style="flex:1; min-width:200px;">
+      <h4 style="color:#ffdd00; margin-bottom:15px;">Famous Places</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li style="margin-bottom:8px;"><a href="islamabad.html" style="color:#2405ac; text-decoration:none;">Islamabad Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="abbottabad.html" style="color:#2405ac; text-decoration:none;">Abbottabad Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="karachi.html" style="color:#2405ac; text-decoration:none;">Karachi Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="lahore.html" style="color:#2405ac; text-decoration:none;">Lahore Famous Places</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Column: Contact Info -->
+    <div class="footer-section" style="flex:1; min-width:200px;">
+      <h4 style="color:#ffdd00; margin-bottom:15px;">Contact Us</h4>
+      <p style="margin:0 0 8px 0;">Email: travelpakistan66@gmail.com</p>
+      <p style="margin:0 0 8px 0;">Phone: +92 3135743761</p>
+      <p style="margin:0;">Location: Abbottabad, Pakistan</p>
+    </div>
+
+  </div>
+ 
+
+  <!-- Footer Bottom -->
+  <div style="text-align:center; margin-top:30px; font-size:14px; color:#ccc;">
+    © 2025 Explore Pakistan | All rights reserved.
+  </div>
+</footer>
+<!-- Google Maps JS -->
+<script>
+function initMap() {
+  // Pakistan center
+  var pakistan = {lat: 30.3753, lng: 69.3451};
+
+  // Map initialization
+  var map = new google.maps.Map(document.getElementById('pakistan-map'), {
+    zoom: 5,
+    center: pakistan
+  });
+
+  // Cities with coordinates and pages
+  var cities = [
+    {name: 'Islamabad', lat: 33.6844, lng: 73.0479, page: 'islamabad.html'},
+    {name: 'Abbottabad', lat: 34.1688, lng: 73.2215, page: 'abbottabad.html'},
+    {name: 'Karachi', lat: 24.8607, lng: 67.0011, page: 'karachi.html'},
+    {name: 'Lahore', lat: 31.5204, lng: 74.3587, page: 'lahore.html'}
+  ];
+
+  // Add markers
+  cities.forEach(function(city) {
+    var marker = new google.maps.Marker({
+      position: {lat: city.lat, lng: city.lng},
+      map: map,
+      title: city.name
+    });
+
+    // Click event to go to page
+    marker.addListener('click', function() {
+      window.location.href = city.page;
+    });
+  });
+}
+</script>
+
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

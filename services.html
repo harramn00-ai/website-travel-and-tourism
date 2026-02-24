@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Pakistan - Packages</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+.booking-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: -10;
+  box-sizing: border-box;
+}
+
+.booking-form {
+  background: #fff;
+  padding: 15px;           /* thoda kam padding */
+  border-radius: 5px;
+  width: 85%;              /* thodi zyada width */
+  max-width: 450px;        /* screen par bada form */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.booking-form input,
+.booking-form button {
+  width: 95%;             /* thodi zyada width inputs & buttons */
+  margin: 0px 0;          /* spacing kam ki */
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.booking-form button {
+  background: #6a0dad;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background: #9b59b6;
+}
+
+/* Booking Success */
+#bookingSuccess {
+  display: none;
+  padding: 40px;
+  text-align: center;
+  background: #f7f7ff;
+}
+
+#bookingSuccess a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #5c2b8c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+
+/* Payment Popup */
+#paymentForm {
+  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1001;
+}
+.payment-form {
+  background:#fff; padding:30px; border-radius:10px; width:400px; text-align:center;
+}
+.payment-form input, .payment-form select, .payment-form button {
+  width:90%; margin:10px 0; padding:10px; font-size:15px; border-radius:6px; border:1px solid #ccc;
+}
+.payment-form button {
+  background:#6a0dad; color:white; border:none; cursor:pointer;
+}
+.payment-form button:hover { background:#9b59b6; }
+#cardFields {display:none;}
+</style>
+</head>
+
+
+<body>
+
+  <!-- ===== Top Header Section ===== -->
+
+<div class="site-topbar">
+  <div class="site-topbar__left">
+    <span>Enjoy your <strong>FREEDOM</strong> with the <strong>BEST tour company</strong> in Abbottabad, Pakistan</span>
+  </div>
+
+  <div class="site-topbar__center">
+    <i class="fa fa-envelope"></i>
+    <a href="mailto:travelpakistan66@gmail.com">travelpakistan66@gmail.com</a>
+  </div>
+
+  <div class="site-topbar__phone">
+    <i class="fa fa-phone"></i>
+    <a href="tel:+923135743761">+92 313 5743761</a>
+  </div>
+
+  
+</div>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="logo">
+    <img src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg?w=2000" alt="Explore Pakistan">
+    <span>Explore Pakistan</span>
+  </div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- Hero Image -->
+<section class="hero">
+  <h1>Exclusive Travel Packages</h1>
+  <p>Choose your dream destination and enjoy unforgettable adventures in Pakistan 🇵🇰</p>
+</section>
+
+<!-- Packages Section -->
+<div class="packages">
+  <div class="package-card">
+    <img src="https://www.tripfore.com/wp-content/uploads/2019/01/Hunza-tune.pk_.jpg" alt="Hunza Valley">
+    <h3>Hunza Valley Tour</h3>
+    <p>5 Days | 4 Nights</p>
+    <p>Price per Person: <strong>15000</strong> PKR</p>
+    <p>Enjoy breathtaking views of mountains and lakes of Hunza.</p>
+     <!-- Discount Info -->
+    <p style="color:green; font-weight:bold;">
+        🎉 Group Discounts: 2% off for 2 members, 7% off for 3–5 members,
+        10% off for 6–8 members, 12% off for 8–9 members, 15% off for 10+ members
+    </p>
+    <button onclick="openBookingForm(1, 15000)">Book Now</button>
+  </div>
+
+  <div class="package-card">
+    <img src="https://www.pakistantoursguide.pk/wp-content/uploads/2015/07/Title-Neelum-Valley-Azad-Kashmir-300x200.jpg" alt="Neelum Valley">
+    <h3>Neelum Valley Tour</h3>
+    <p>4 Days | 3 Nights</p>
+     <p>Price per Person: <strong>12000</strong> PKR</p>
+    <p>Explore the green valleys and waterfalls of Azad Kashmir.</p>
+     <!-- Discount Info -->
+    <p style="color:green; font-weight:bold;">
+        🎉 Group Discounts: 2% off for 2 members, 7% off for 3–5 members,
+        10% off for 6–8 members, 12% off for 8–9 members, 15% off for 10+ members
+    </p>
+    <button onclick="openBookingForm(2, 12000)">Book Now</button>
+  </div>
+
+  <div class="package-card">
+    <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/05/image-4-1-1-1024x640.jpg" alt="Karachi Beach">
+    <h3>Karachi Beach Holiday</h3>
+    <p>2 Days | 1 Night</p>
+    <p>Price per Person: <strong>8000</strong> PKR</p>
+    <p>Relax at Sea View and French Beach with sunset dinner by the sea.</p>
+    <!-- Discount Info -->
+    <p style="color:green; font-weight:bold;">
+        🎉 Group Discounts: 2% off for 2 members, 7% off for 3–5 members,
+        10% off for 6–8 members, 12% off for 8–9 members, 15% off for 10+ members
+    </p>
+
+    <button onclick="openBookingForm(3, 8000)">Book Now</button>
+  </div>
+
+  <div class="package-card">
+    <img src="https://www.tripfore.com/wp-content/uploads/2019/01/Faisal-Mosque-Lonely-Planet-1024x694.jpg" alt="Faisal Mosque">
+    <h3>Faisal Mosque</h3>
+    <p>2 Days | 1 Night</p>
+     <p>Price per Person: <strong>10000</strong> PKR</p>
+    <p>Visit the beautiful Faisal Mosque — an architectural masterpiece and one of the largest mosques in the world.</p>
+     <!-- Discount Info -->
+    <p style="color:green; font-weight:bold;">
+        🎉 Group Discounts: 2% off for 2 members, 7% off for 3–5 members,
+        10% off for 6–8 members, 12% off for 8–9 members, 15% off for 10+ members
+    </p>
+    <button onclick="openBookingForm(4, 10000)">Book Now</button>
+  </div>
+
+  <div class="package-card">
+    <img src="https://www.tripfore.com/wp-content/uploads/2019/01/Mizar-e-Qauid-Karachi-Flickr.jpg" alt="Mausoleum of Quaid-e-Azam">
+    <h3>Mausoleum of Quaid-e-Azam</h3>
+    <p>3 Days | 1 Night</p>
+     <p>Price per Person: <strong>9000</strong> PKR</p>
+    <p>Explore the iconic Mausoleum of Quaid-e-Azam, a symbol of Pakistan’s heritage and pride.</p>
+     <!-- Discount Info -->
+    <p style="color:green; font-weight:bold;">
+        🎉 Group Discounts: 2% off for 2 members, 7% off for 3–5 members,
+        10% off for 6–8 members, 12% off for 8–9 members, 15% off for 10+ members
+    </p>
+   <button onclick="openBookingForm(5, 9000)">Book Now</button> 
+  </div>
+</div>
+
+<!-- Booking Popup -->
+<div id="bookingForm" class="booking-popup">
+  <form action="save_booking.php" method="POST" class="booking-form">
+    <h2>Book Your Trip</h2>
+    <input type="hidden" name="TravellerID" value=" <?php echo $travellerID ?? ''; ?>">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <input type="date" name="another_date" class="future-date" required>
+
+    <label>Number of Travelers:</label>
+    <input type="number" name="num_travelers" id="num_travelers" min="1" value="1" required>
+
+    <p>Price per Person: <span id="pricePerPerson"></span> PKR</p>
+    <p>Total Amount: <span id="totalAmount"></span> PKR</p>
+    <p id="discountInfo" style="color:green; font-weight:bold;"></p>
+
+    <input type="hidden" id="destination_id" name="destination_id">
+    <input type="hidden" id="total_amount" name="total_amount">
+
+    <button type="submit">Confirm Booking</button>
+    <button type="button" onclick="closeBookingForm()">Cancel</button>
+  </form>
+</div>
+
+
+
+
+<script src="booking.js"></script>
+
+
+
+<!-- Footer -->
+<footer class="site-footer" style="background:#003566; color:#fff; padding:40px 20px; font-family:Poppins, sans-serif;">
+  <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; gap:20px;">
+
+    <!-- Left Column: Famous Places -->
+    <div class="footer-section" style="flex:1; min-width:200px;">
+      <h4 style="color:#ffdd00; margin-bottom:15px;">Famous Places</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li style="margin-bottom:8px;"><a href="islamabad.html" style="color:#2405ac; text-decoration:none;">Islamabad Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="abbottabad.html" style="color:#2405ac; text-decoration:none;">Abbottabad Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="karachi.html" style="color:#2405ac; text-decoration:none;">Karachi Famous Places</a></li>
+        <li style="margin-bottom:8px;"><a href="lahore.html" style="color:#2405ac; text-decoration:none;">Lahore Famous Places</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Column: Contact Info -->
+    <div class="footer-section" style="flex:1; min-width:200px;">
+      <h4 style="color:#ffdd00; margin-bottom:15px;">Contact Us</h4>
+      <p style="margin:0 0 8px 0;">Email: travelpakistan66@gmail.com</p>
+      <p style="margin:0 0 8px 0;">Phone: +92 3135743761</p>
+      <p style="margin:0;">Location: Abbottabad, Pakistan</p>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align:center; margin-top:30px; font-size:14px; color:#ccc;">
+    © 2025 Explore Pakistan | All rights reserved.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
